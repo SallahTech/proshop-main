@@ -18,21 +18,21 @@ import { addToCart } from "../slices/cartSlice";
 
 const ProductScreen = () => {
   const { id: productId } = useParams();
+  const [qty, setQty] = useState(1);
+
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  const [qty, setQty] = useState(1);
+  const addToCartHandler = () => {
+    dispatch(addToCart({ ...product, qty }));
+    navigate("/cart");
+  };
 
   const {
     data: product,
     isLoading,
     error,
   } = useGetProductDetailsQuery(productId);
-
-  const addToCartHandler = () => {
-    dispatch(addToCart({ ...product, qty }));
-    navigate("/cart");
-  };
 
   return (
     <>
