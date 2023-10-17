@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
 import {
   Button,
   Card,
@@ -9,16 +8,18 @@ import {
   ListGroup,
   Row,
 } from "react-bootstrap";
-import { Link, useParams, useNavigate } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import { toast } from "react-toastify";
-import Rating from "../components/Rating";
-import {
-  useGetProductDetailsQuery,
-  useCreateReviewMutation,
-} from "../slices/productsApiSlice";
 import Loader from "../components/Loader";
 import Message from "../components/Message";
+import Meta from "../components/Meta";
+import Rating from "../components/Rating";
 import { addToCart } from "../slices/cartSlice";
+import {
+  useCreateReviewMutation,
+  useGetProductDetailsQuery,
+} from "../slices/productsApiSlice";
 
 const ProductScreen = () => {
   const { id: productId } = useParams();
@@ -71,6 +72,7 @@ const ProductScreen = () => {
         <Message variant="danger">{error.data?.message || error.error}</Message>
       ) : (
         <>
+          <Meta title={product.name} />
           <Row>
             <Col md={5}>
               <Image src={product.image} alt={product.name} fluid />

@@ -1,15 +1,15 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
+import { Button, Form } from "react-bootstrap";
 import { Link, useNavigate, useParams } from "react-router-dom";
-import { Form, Button } from "react-bootstrap";
-import Message from "../../components/Message";
-import Loader from "../../components/Loader";
+import { toast } from "react-toastify";
 import FormContainer from "../../components/FormContainer";
+import Loader from "../../components/Loader";
+import Message from "../../components/Message";
 import {
   useGetProductDetailsQuery,
   useUpdateProductMutation,
   useUploadProductImageMutation,
 } from "../../slices/productsApiSlice";
-import { toast } from "react-toastify";
 
 const ProductEditScreen = () => {
   const { id: productId } = useParams();
