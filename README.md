@@ -1,6 +1,6 @@
 # Awesome eCommerce Project
 
-Welcome to the Awesome eCommerce Project! This project is a full-fledged eCommerce platform with a range of features, including authentication, authorization, shopping cart functionality, order placement, secure PayPal checkout, and product management.
+Welcome to the Awesome eCommerce Project! This project is a full-fledged eCommerce platform with a range of features, including authentication, authorization, shopping cart functionality, order placement, secure PayPal checkout and product management.
 
 ![Project Screenshot](screenshot.png)
 
@@ -55,4 +55,4 @@ Follow these instructions to get a copy of the project up and running on your lo
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/yourusername/awesome-ecommerce.git
+   git clone https://github.com/yourusername/proshop-main.git
