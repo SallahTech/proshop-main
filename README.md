@@ -27,7 +27,7 @@ Welcome to the Awesome eCommerce Project! This project is a full-fledged eCommer
 
 ## Demo
 
-You can explore a live demo of this project [here](link-to-demo).
+You can explore a live demo of this project [here](https://proshop-did8.onrender.com/).
 
 ## Technologies Used
 
